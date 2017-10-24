@@ -1,9 +1,18 @@
 pipeline {
   agent any
   stages {
-    stage('hehe') {
-      steps {
-        sh 'echo "${name}"'
+    stage('ll') {
+      parallel {
+        stage('hehe') {
+          steps {
+            sh 'echo "${name}"'
+          }
+        }
+        stage('lla') {
+          steps {
+            echo 'nima'
+          }
+        }
       }
     }
   }
