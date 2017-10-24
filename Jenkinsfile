@@ -1,23 +1,13 @@
 pipeline {
   agent any
   stages {
-    stage('ll') {
-      parallel {
-        stage('hehe') {
-          steps {
-            sh 'echo "${name}"'
-          }
-        }
-        stage('lla') {
-          steps {
-            echo 'nima'
-          }
-        }
+    stage('Building') {
+      steps {
+        sh 'echo \'hehe\''
       }
     }
   }
   environment {
     name = 'linyao'
-    age = '24'
   }
 }
